@@ -76,7 +76,7 @@ if uploaded_files:
 
     # KPI - jami tushum va o‘rtacha box tushumi
     total_amount = filtered_df['amount'].sum()
-    avg_amount = filtered_df.groupby('device_obj__name')['amount'].mean().mean()
+    avg_amount = filtered_df['amount'].mean()
 
     st.metric("Jami tushum", f"{total_amount:,.0f} so'm")
     st.metric("O‘rtacha box tushumi", f"{avg_amount:,.0f} so'm")
